@@ -7,4 +7,5 @@
 @section('body')
     ini body user dashboard
     <p>Halo</p>
+    <p>Halo 2</p>
 @endsection
