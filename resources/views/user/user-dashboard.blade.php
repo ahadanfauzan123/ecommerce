@@ -6,4 +6,5 @@
 
 @section('body')
     ini body user dashboard
+    halo
 @endsection
