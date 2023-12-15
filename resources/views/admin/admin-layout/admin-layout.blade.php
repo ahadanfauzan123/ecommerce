@@ -7,7 +7,7 @@
     <title>@yield('title')</title>
     @vite('resources/css/app.css')
 </head>
-<body class="w-screen min-h-screen bg-gray-200 text-gray-700">
+<body class="w-screen min-h-screen p-0 m-0 bg-gray-200 text-gray-700">
     @include('admin/admin-layout.admin-navbar')
     @yield('body')
 </body>

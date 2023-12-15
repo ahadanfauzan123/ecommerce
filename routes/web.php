@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('user.user-landingPage');
+});
+Route::get('/home', function () {
     return view('user.user-dashboard');
 });
 Route::get('/seller', function () {
@@ -21,4 +24,13 @@ Route::get('/seller', function () {
 });
 Route::get('/admin', function () {
     return view('admin.admin-dashboard');
+});
+Route::get('/login', function () {
+    return view('auth.signIn');
+});
+Route::get('/register', function () {
+    return view('auth.signUp');
+});
+Route::get('/selectInterest', function () {
+    return view('auth.selectInterest');
 });
