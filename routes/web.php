@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\KonserController;
+use Database\Seeders\KonserSeeder;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +33,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.signUp');
 });
+Route::get("/checkout", [KonserController::class, "index"]);
 Route::get('/selectInterest', function () {
     return view('auth.selectInterest');
 });
