@@ -25,6 +25,7 @@ return new class extends Migration
                 ->refereces('id')
                 ->on('events')
                 ->onDelete('cascade');
+            $table->integer('total_harga');
             $table->timestamps('tgl_trans');
         });
     }
