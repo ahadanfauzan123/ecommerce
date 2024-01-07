@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('role')->default(0);
+            $table->set('interest', ['rock','jazz','dangdut','k-pop','j-pop','surf rock']);
             $table->rememberToken();
             $table->timestamps();
         });

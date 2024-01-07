@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('tikets', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('jenis');
+            $table->integer('harga');
+            $table->integer('jumlah');
+            $table->enum('status', ['Tersedia', 'Habis']);
         });
     }
 

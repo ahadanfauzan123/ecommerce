@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreign('id_kategori')
+                ->refereces('id')
+                ->on('events')
+                ->onDelete('cascade');
+            $table->string('nama');
+            $table->string('keterangan');
+            $table->text('img');
+            $table->timestamps('tgl');
         });
     }
 

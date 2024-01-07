@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreign('id_user')
+                ->refereces('id')
+                ->on('users')
+                ->onDelete('cascade');
+            $table->string('komentar');
+            $table->timestamps('tgl');
         });
     }
 
