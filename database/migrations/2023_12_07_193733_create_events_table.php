@@ -13,14 +13,11 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id_kategori')
-                ->refereces('id')
-                ->on('events')
-                ->onDelete('cascade');
+            $table->unsignedBigInteger('id_kategori');
             $table->string('nama');
             $table->string('keterangan');
             $table->text('img');
-            $table->timestamps('tgl');
+            $table->timestamps();
         });
     }
 

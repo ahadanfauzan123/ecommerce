@@ -13,12 +13,9 @@ return new class extends Migration
     {
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id_user')
-                ->refereces('id')
-                ->on('users')
-                ->onDelete('cascade');
+            $table->unsignedBigInteger('id_user');
             $table->string('komentar');
-            $table->timestamps('tgl');
+            $table->timestamps();
         });
     }
 

@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'id_kategori',
+        'nama',
+        'keterangan',
+        'img',
+    ];
+    public $timestamps = false;
 }

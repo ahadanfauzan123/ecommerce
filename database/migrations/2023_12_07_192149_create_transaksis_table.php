@@ -13,20 +13,11 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id_user')
-                ->refereces('id')
-                ->on('users')
-                ->onDelete('cascade');
-            $table->foreign('id_tiket')
-                ->refereces('id')
-                ->on('tikets')
-                ->onDelete('cascade');
-            $table->foreign('id_event')
-                ->refereces('id')
-                ->on('events')
-                ->onDelete('cascade');
-            $table->integer('total_harga');
-            $table->timestamps('tgl_trans');
+            $table->unsignedBigInteger('id_user');
+            $table->unsignedBigInteger('id_tiket');
+            $table->unsignedBigInteger('id_event');
+            $table->unsignedBigInteger('total_harga');
+            $table->timestamps();
         });
     }
 
